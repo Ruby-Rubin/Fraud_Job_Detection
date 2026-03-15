@@ -1,23 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Fraudulent Job Detection</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
 <div class="container">
 
-<h1>PHISHING DETECTOR</h1>
-<p class="subtitle">Neural URL Classification Engine</p>
+<h1>Fraudulent Job Detection</h1>
 
 <form action="/predict" method="post">
 
-<textarea name="job" placeholder="Paste job description here..."></textarea>
+<textarea name="job" placeholder="Paste job description..."></textarea>
 
-<button type="submit">RUN DETECTION</button>
+<button type="submit">Analyze</button>
 
 </form>
 
+<div class="result">
+
 {{ prediction_text|safe }}
 
-<div class="stats">
-<div>6 FEATURES</div>
-<div>ML ENGINE</div>
-<div>2 CLASSES</div>
-<div>LIVE</div>
 </div>
 
 </div>
+
+</body>
+</html>
