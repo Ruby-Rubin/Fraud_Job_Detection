@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Fraud Job Detector</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Fraudulent Job Detection</h1>
+
+<form action="/predict" method="post">
+
+<textarea name="job" placeholder="Paste job description here..."></textarea>
+
+<br>
+
+<button type="submit">Check Job</button>
+
+</form>
+
+<div class="result">
+
+{{ prediction_text }}
+
+</div>
+
+</div>
+
+</body>
+</html>
