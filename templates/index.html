@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Fraud Job Detector</title>
+<title>Fraudulent Job Detection</title>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
@@ -15,23 +15,26 @@
 
 <h1>Fraudulent Job Detection</h1>
 
+<p class="subtitle">AI powered scam job detector</p>
+
 <form action="/predict" method="post">
 
 <textarea name="job" placeholder="Paste job description here..."></textarea>
 
 <br>
 
-<button type="submit">Check Job</button>
+<button type="submit">Analyze Job</button>
 
 </form>
 
 <div class="result">
 
-{{ prediction_text }}
+{{ prediction_text|safe }}
 
 </div>
 
 </div>
 
 </body>
+
 </html>
